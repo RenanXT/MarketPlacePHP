@@ -66,16 +66,20 @@ os dados sao enviados para o controller por meio de um formulario
 
 o botao de envio é referenciado dentro do controller principal e inclui a model do login caso seja enviado
 
-com base nos dados do formulario é criado um objeto de Usuario chamando o metodo ConsultarUsuario para coletar os dados no banco e redirecionar o valor da variavel da URL para o inicio
+com base nos dados do formulario é criado um objeto de Usuario chamando o metodo ConsultarUsuario para coletar os dados no banco
+
+depois disso é criada uma session com os dados do usuario para serem usados por toda a pagina e descartados ao se desconectar, apos isso a URL é redireciona com o valor o " inicio " para seguir a navegacao logica do sistema
 
 ## Sistema de cadastro
 a pagina de cadastro é acessada pelo formulario da view de login
 
-dessa vez o acesso é liberado pelo controller proprio da pagina de cadastro na navegaao
+dessa vez o acesso é liberado pelo controller proprio da pagina de cadastro na navegaao e não pela variavel da URL
 
-uma vez incluida a pagina a view de cadastro o usuario pode enviar um formulario para criar conta 
+uma vez incluida a pagina a view de cadastro o usuario pode enviar um formulario para inserir um registro no banco de dados 
 
-depois continuo...
+os dados sao inseridos pelo metodo CadastrarUsuario da classe usuario apos instanciar um objeto da classe
+
+
 
 
 
