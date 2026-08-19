@@ -44,26 +44,37 @@ Sistema de Login e Cadastro integração completa com banco de dados. Listagem d
 
 # Explicação do sistema 
 O sistema funciona na estrutura MVC e em todo momento se mantém em index.php, somente incluindo as paginas qunado necessario.
+
 O fluxo acontece da seguinte forma.
 
 ## Sistema de navegação
 o sistema é acessado por meio do index 
+
 é chamado o controller principal que serve para gerenciar e organizar os controllers das paginas isoladas
+
 dentro do controller principal é criada uma session para guardar os dados de login
+
 são incluidos os arquivos do banco de dados e da classe usuario
+
 por meio de uma varaivel " pagina " da URL é controlado o avanço das paginas, inicialmente atribuido o valor de sair
 a variavel é jogada em uma estrutura switch para decidir o destino da pagina 
 
 ## Sistema de login
 o sistema pega o valor da varaivel da URL e caso for " sair " prossegue para a view de login
+
 os dados sao enviados para o controller por meio de um formulario
+
 o botao de envio é referenciado dentro do controller principal e inclui a model do login caso seja enviado
+
 com base nos dados do formulario é criado um objeto de Usuario chamando o metodo ConsultarUsuario para coletar os dados no banco e redirecionar o valor da variavel da URL para o inicio
 
 ## Sistema de cadastro
 a pagina de cadastro é acessada pelo formulario da view de login
+
 dessa vez o acesso é liberado pelo controller proprio da pagina de cadastro na navegaao
+
 uma vez incluida a pagina a view de cadastro o usuario pode enviar um formulario para criar conta 
+
 depois continuo...
 
 
