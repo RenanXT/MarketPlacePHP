@@ -1,11 +1,18 @@
+
 <?php
 
-if (isset($_POST['btnCadastrar'])) {
-    include_once __DIR__ . '/../views/pages/cadastro.php';
+try {
+    $user = new Usuario($conexao);
+
+if ($user->CadastrarUsuario($_POST)) {
+  
+     //to achando que nao ra redirecionando aqui por causa do switch no controller!!!!!
     exit;
+
 }
-if (isset($_POST['btnCriarConta'])) {
-    include_once __DIR__ . '/../models/cadastro.php';
+
+} catch (PDOException $e) {
+     echo '[ERRO] barraNav-> ' . $e . '';
 }
 
 ?>

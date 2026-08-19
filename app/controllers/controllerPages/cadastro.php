@@ -5,7 +5,7 @@ if (isset($_POST['btnCadastrar'])) {
     exit;
 }
 if (isset($_POST['btnCriarConta'])) {
-    include_once __DIR__ . '/../models/cadastro.php';
+    include_once __DIR__ . '/../../models/cadastro.php';
 }
 
 ?>
