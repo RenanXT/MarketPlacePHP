@@ -79,8 +79,18 @@ uma vez incluida a pagina a view de cadastro o usuario pode enviar um formulario
 
 os dados sao inseridos pelo metodo CadastrarUsuario da classe usuario apos instanciar um objeto da classe
 
+## Sistema de Pesquisa pela barra de navegação
+dessa vez a logica é escrita em funcoes Js ao inves de PHP para permitir que a busca dos produtos não exija o recarregamento da pagina 
 
+é adicionado um evento " input " para ser chamado a cada tecla pressionada
 
+primeiramente é separado a div do bloco dos produtos e a barra de pesquisa e então são as ações são separadas em funções
+
+controller é onde fica a logica principal da busca. É chamado o metodo Ajax para cada novo valor inserido na barra de pesquisa. Os dados são tratados em um arquivo php que envia como parametro na URL o valor digitado na barra e então é criada uma instancia da classe Produto que segue chamando o metodo PesquisaProduto que seleciona todos os registros semelhantes ao que for digitado e o valor é devolvido em Json
+
+apos isso é criado a const " modelo " para ser clonada de acordo com o tamanho do Json da pesquisa e então os dados dos produtos são inseridos por uma estrutura de repetição 
+
+ para garantir que não haja produtos duplicados na visualização final a varaivel da div é "limpa" antes de chamar a função controller ( obs: tive que manter a const modelo fora da div para não ser limpa tambem )
 
 
 
