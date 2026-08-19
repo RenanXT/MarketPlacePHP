@@ -46,7 +46,7 @@ Sistema de Login e Cadastro integração completa com banco de dados. Listagem d
 O sistema funciona na estrutura MVC e em todo momento se mantem em index.php, somente incluindo as paginas qunado necessario.
 O fluxo acontece da seguinte forma.
 
-## Sistema de navegação =>
+## Sistema de navegação
 o sistema é acessado por meio do index 
 é chamado o controller principal que serve para gerenciar e organizar os controllers das paginas isoladas
 dentro do controller principal é criada uma session para guardar os dados de login
