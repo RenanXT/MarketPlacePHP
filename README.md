@@ -43,7 +43,7 @@ Marketplace Web desenvolvido com PHP seguindo o padrão MVC e integrado ao banco
 Sistema de Login e Cadastro integração completa com banco de dados. Listagem de produtos a venda Possibilidade de compra pelos usuarios Cadastro do catalogo de lojas para gerar parecerias sistema interno de notificações; gerenciamento de perfil do usuário; personalização de informações pessoais e visuais do site; área de suporte;
 
 # Explicação do sistema 
-O sistema funciona na estrutura MVC e em todo momento se mantem em index.php, somente incluindo as paginas qunado necessario.
+O sistema funciona na estrutura MVC e em todo momento se mantém em index.php, somente incluindo as paginas qunado necessario.
 O fluxo acontece da seguinte forma.
 
 ## Sistema de navegação
@@ -55,10 +55,17 @@ por meio de uma varaivel " pagina " da URL é controlado o avanço das paginas, 
 a variavel é jogada em uma estrutura switch para decidir o destino da pagina 
 
 ## Sistema de login
-o sistema pega o valor da varaivel da URL e caso for " sair " prossegeu para a view de login
+o sistema pega o valor da varaivel da URL e caso for " sair " prossegue para a view de login
 os dados sao enviados para o controller por meio de um formulario
 o botao de envio é referenciado dentro do controller principal e inclui a model do login caso seja enviado
 com base nos dados do formulario é criado um objeto de Usuario chamando o metodo ConsultarUsuario para coletar os dados no banco e redirecionar o valor da variavel da URL para o inicio
+
+## Sistema de cadastro
+a pagina de cadastro é acessada pelo formulario da view de login
+dessa vez o acesso é liberado pelo controller proprio da pagina de cadastro na navegaao
+uma vez incluida a pagina a view de cadastro o usuario pode enviar um formulario para criar conta 
+depois continuo...
+
 
 
 
