@@ -1,4 +1,4 @@
-# MarketPlacePHP ( Em Andamento )
+# MarketPlacePHP
 
 Projeto de e-commerce desenvolvido com PHP
 
